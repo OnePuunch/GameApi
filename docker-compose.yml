@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  gameapi:
+    image: ${DOCKER_REGISTRY-}gameapi
+    build:
+      context: .
+      dockerfile: GameApi\Dockerfile
