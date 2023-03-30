@@ -15,4 +15,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include=".ssh\authorized_keys" />
+  </ItemGroup>
+
 </Project>
