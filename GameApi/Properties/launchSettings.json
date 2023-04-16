@@ -21,8 +21,13 @@
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger", 
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
       "publishAllPorts": true,
+      "sslPort": 10000,
+      "environmentVariables": {
+        "ASPNETCORE_URLS": "https://+:10000;http://+:11000",
+        "ASPNETCORE_HTTPS_PORT": "10000"
+      },
       "useSSL": true
     }
   },
@@ -32,7 +37,7 @@
     "anonymousAuthentication": true,
     "iisExpress": {
       "applicationUrl": "http://localhost:16397",
-      "sslPort": 44310
+      "sslPort": 44410
     }
   }
 }
